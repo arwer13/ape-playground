@@ -1,0 +1,21 @@
+name: ape-playground
+plugins:
+  - name: hardhat
+  - name: ganache
+  - name: infura
+
+hardhat:
+  fork:
+    ethereum:
+      mainnet:
+        upstream_provider: infura
+        block_number: 17306000
+
+ganache:
+  server:
+    port: 8545
+  fork:
+    ethereum:
+      mainnet:
+        upstream_provider: infura
+        block_number: 17306000

@@ -1,0 +1,29 @@
+__pycache__
+.history
+.hypothesis/
+.python-version
+.pytest_cache
+.build/
+build/
+reports/
+dist/
+
+# PyCharm
+.idea
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/PythonSettings.json
+/.vs/scripts/v17/.suo
+
+# virtual environment
+.direnv
+.venv
+
+/node_modules
+yarn-error.log
+
+# VSCode
+.vscode
+
+# Mac os
+.DS_Store
