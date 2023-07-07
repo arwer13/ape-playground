@@ -3,6 +3,7 @@ plugins:
   - name: hardhat
   - name: ganache
   - name: infura
+  - name: etherscan
 
 hardhat:
   fork:

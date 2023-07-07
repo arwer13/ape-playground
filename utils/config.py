@@ -117,7 +117,6 @@ class ContractsLazyLoader:
 
     @property
     def agent(self):
-        print('AGENT')
         return project.Agent.at(AGENT)
 
     @property
