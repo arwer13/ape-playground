@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ape-scratch"
+name = "ape-playground"
 version = "0.1.0"
 authors = ["ArWer <arwer13@gmail.com>"]
 description = ""

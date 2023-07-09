@@ -88,6 +88,10 @@ def get_config_params() -> Dict[str, str]:
 
 class ContractsLazyLoader:
     @property
+    def shapella_upgrade_template(self):
+        return project.ShapellaUpgradeTemplate.at(LIDO_V2_UPGRADE_TEMPLATE)
+
+    @property
     def lido_v1(self):
         return project.LidoV1.at(LIDO)
 

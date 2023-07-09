@@ -4,6 +4,7 @@ plugins:
   - name: ganache
   - name: infura
   - name: etherscan
+  - name: solidity
 
 hardhat:
   fork:
@@ -19,4 +20,4 @@ ganache:
     ethereum:
       mainnet:
         upstream_provider: infura
-        block_number: 17306000
+        block_number: 17240000
