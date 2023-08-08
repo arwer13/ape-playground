@@ -3,6 +3,7 @@ from typing import Tuple, Optional, Dict, List
 import web3
 
 from hexbytes import HexBytes
+from ape import accounts
 
 from utils.evm_script import (
     encode_call_script,
@@ -11,7 +12,7 @@ from utils.evm_script import (
     EMPTY_CALLSCRIPT,
 )
 
-from utils.config import prompt_bool, CHAIN_NETWORK_NAME, contracts, get_config_params
+from utils.config import prompt_bool, CHAIN_NETWORK_NAME, contracts, ETH_WHALE
 
 def color(x):
     return ""
@@ -67,7 +68,9 @@ def create_vote(
             )
         ]
     )
-    tx = token_manager.forward(new_vote_script, sender=tx_params['from'])
+    sender = accounts[tx_params['from']]
+    accounts[ETH_WHALE].transfer(sender, int(10e18))
+    tx = token_manager.forward(new_vote_script, sender=sender)
 
     # TODO
     # if tx.revert_msg is not None:

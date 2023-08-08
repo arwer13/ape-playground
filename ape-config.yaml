@@ -5,13 +5,47 @@ plugins:
   - name: infura
   - name: etherscan
   - name: solidity
+  - name: foundry
+
+dependencies:
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.4.2
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 3.4.0
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 2.0.0
+  - name: AragonOS
+    github: aragon/aragonOS
+    version: 4.4.0
+  - name: AragonId
+    github: aragon/aragon-id
+    version: 2.0.3
+  # - name: AragonAppsAgent
+  #   github: aragon/aragon-apps
+  #   version: 2.0.0
+  - name: LidoAragonApps
+    github: lidofinance/aragon-apps
+    version: master
+
+solidity:
+  import_remapping:
+    - "@openzeppelin/contracts-v4.4=OpenZeppelin/4.4.2"
+    - "@openzeppelin/contracts=OpenZeppelin/3.4.0"
+    - "openzeppelin-solidity/contracts=OpenZeppelin/2.0.0"
+    - "@aragon/os/contracts=AragonOS/4.4.0"
+    - "@aragon/id/contracts=AragonId/2.0.3"
+    # - "@aragon/apps-agent=AragonAppsAgent/2.0.0"
+    # - "@aragon/apps-lido"
 
 hardhat:
   fork:
     ethereum:
       mainnet:
         upstream_provider: infura
-        block_number: 17306000
+        block_number: 17240000
 
 ganache:
   server:

@@ -6,9 +6,12 @@ description = ""
 
 [tool.poetry.dependencies]
 python = ">=3.10.4,<3.11"
-eth-ape = "^0.6.11"
+eth-ape = "^0.6.12"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+pytest-xdist = "^3.3.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
