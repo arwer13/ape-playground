@@ -4,6 +4,7 @@ __pycache__
 .python-version
 .pytest_cache
 .build/
+contracts/.cache
 build/
 reports/
 dist/
